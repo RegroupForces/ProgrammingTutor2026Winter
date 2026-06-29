@@ -12,13 +12,26 @@ input_lst = [1,2,3,3,3,4,4,5] #this is the first example in the question
 
 
 #solution
-num_count = {}
-for item in input_lst:
-    if item in num_count.keys():
-        num_count[item] += 1
-    else:
-        num_count[item] = 1
+def get_highest_count_num(lst):
+    #initialise variables
+    highest_num = None
+    highest = 0
+    num_count = {}
 
-res = sorted(num_count.values(), reverse=True)[0]
+    for num in lst:
 
-print(res)
+        #count each number
+        if num in num_count.keys():
+            num_count[num] += 1
+        else:
+            num_count[num] = 1
+        
+        #update the highest if needed
+        if num_count[num] > highest:
+            highest = num_count[num]
+            highest_num = num
+    
+    return highest_num
+
+
+print(get_highest_count_num(input_lst))
