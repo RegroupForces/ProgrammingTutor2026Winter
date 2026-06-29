@@ -1,4 +1,11 @@
 """
+Student ID: 35099224
+Student Name: Jianqiu Dong
+Last Edited: 29/06/2026
+"""
+
+
+"""
 TASK
 Given a list of integers, find the integer that occurs most frequently. 
 E.g, given [1,2,3,3,3,4,4,5], your solution should produce 3 as a result. 
